@@ -1,0 +1,255 @@
+:root {
+    --primary: rgb(101, 100, 74);
+    --primaryHover: rgb(153, 153, 118);
+    --secondary: rgb(236, 235, 208);
+    --para: rgb(176, 197, 161);
+}
+
+nav, footer {
+    color: rgb(253, 251, 251);
+    background-color: var(--primary);
+    }
+
+.nav-link {
+    color: white;
+}
+
+.navbar-brand {
+    margin-right: auto;
+}
+
+.nav-link:hover {
+    color: var(--primaryHover);
+}
+
+.bg-img {
+    min-height: 90vh;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(/frontend/images/Home-Background.jpg);
+    background-blend-mode: overlay;
+    background-color: rgb(103, 100, 96);
+}
+
+.bg-img.dashboard {
+    min-height: auto;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+.pageNotReady {
+    background-color: white;
+    height: 66vh;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.slideUp {
+    opacity: 0;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    }
+
+/* everytime there is an a tag inside the id longinform and signupform change it to black. */
+#loginForm a, #signupForm a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+#loginForm a:hover, #signupForm a:hover {
+    text-decoration:underline;
+}
+
+
+/*   
+ @keyframes rotateIn{
+    0% {
+        opacity: 0;
+        transform: rotate(360deg) scale(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(100%);
+    }
+}
+.rotateIn {
+    opacity: 0;
+    animation-name: rotateIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+} */
+
+        .card {
+            border-radius: 10px; /* Rounded corners */
+            transition: all 0.3s ease; /* Smooth hover effect */
+            height: 100%; /* Ensure cards are same height in a row */
+            display: flex;
+            flex-direction: column;
+            width: auto;
+        }
+        .card:hover {
+           transform: translateY(-5px); 
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Allow content to grow and push button to bottom */
+            padding: 8px; 
+        }
+        .price {
+            font-size: 72px; 
+            font-weight: 800;
+            color:var(--primary); 
+        }
+        .price-month {
+            font-size: 25px; 
+            color: #6b7280; 
+            margin-left: 5px;
+        }
+        .feature-list {
+            list-style: none; 
+            padding-left: 10px;
+            margin-bottom: 4cqi; 
+            flex-grow: 1; 
+        }
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px; 
+            color: #4b5563; 
+        }
+       
+        .btn-primary {
+            background-color: #121115; 
+            border-color: #f60606;
+            font-weight: 600;
+            padding:10px 5px;
+            border-radius: 10px;
+        }
+        .btn-primary:hover {
+            background-color: var(--primaryHover); 
+            border-color: #4338ca;
+        }
+      
+        .card.highlighted {
+            border: 2px solid #4f46e5; 
+            transform: scale(1.03); 
+            position: relative; 
+        }
+        .card.highlighted .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--primary);
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+        }
+
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 10 auto;
+        }
+
+        .container h1 {
+            color: var(--secondary);
+        }
+
+        .features_top, .features_container {
+            padding: 10px 5px;
+        }
+
+        .features_top {
+            text-align: center;
+        }
+
+        .features_top h1 {
+            margin-bottom: 10px;
+            line-height: 1.2;
+            color: var(--secondary)
+        }
+
+        @media (max-width: 576px) {
+            .feature_items h4 {
+                font-size: 1.2rem;
+            }
+
+            .featureItem_info p {
+            font-size: 0.95rem;
+            padding: 0 10px;
+            }
+        }
+
+        .features_top p {
+            color: var(--para);
+            font-size: 20px;
+            line-height: 2;
+            margin-bottom:  10px;
+            padding: 0 20px;
+            font-weight: 300;
+            
+        }
+
+        .features_container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .feature_items {
+            flex: 1 1 300px;
+            max-width: 350px;
+        }
+
+ /*       .features_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; 
+        }
+
+        .feature_items {
+            padding: 10px;
+            margin-top: 15px;
+            text-align: center;
+        }
+*/
+        .feature_items span {
+            font-size: 80px;
+            color: coral;
+            margin-bottom: 5px;
+        }
+
+        .featureItem_info h4 {
+
+            font-size: 30px;
+            color: rgb(194, 227, 171);
+            margin-bottom: 5px;
+        }
+
+        .featureItem_info p {
+            font-size: 20px;
+            color: var(--para);
+            line-height: 2;
+            font-weight: 300;
+        }
+
+

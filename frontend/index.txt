@@ -1,0 +1,143 @@
+If (Node Package Manager) NPM init –y can’t be loaded b/c “ running scripts are disabled on your system”
+Open power shell
+Type Set-ExecutionPolicy RemoteSigned
+
+
+Package.json
+main: index.js  main backend server file
+ "start": "nodemon index.js" It will automatically restart the server or refresh the whenever their is a change
+
+ another command
+
+ npm install express
+
+ npm install nodemon  = listen for changes and restart the server automatically
+
+ npm install cors
+
+Windows Key + . = emojies
+
+
+dashboard.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <main>
+            <div class="bg-img dashboard py-5"> 
+                <div class="d-flex justify-content-center align-items-center flex-column  px-3 container px-md-4 px-lg-5">
+                    <div class="rounded shadow bg-white p-3 p-lg-5 col-12">
+                        <form id="taskForm" class="mb-5">
+                            <h1 id="greeting" class="mb-5 display-2">Hello </h1>
+                            <h2 class="mb-3">New task</h2>
+                            <input id="taskName" type="text" class="mb-2 form-control shadow-sm" placeholder="Task Name">
+                            <textarea id="taskDescription" type="text" class="form-control mb-2 shadow-sm" placeholder="Task description" rows="7"></textarea>
+                            <input id="dueDate" type="date" class="mb-3 form-control shadow-sm" placeholder="Due Date">
+                            <button type="submit" class="btn btn-dark shadow-sm px-5">Create Task</button>
+                        </form>
+
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                                <h2>To Do</h2>
+                                <ul id="toDoList" class="list-group">
+                                    
+                                 ////////0   TO DO CARD /////////////////////////
+
+                                    <li class="p-3 shadow-sm mt-2 card">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h4 class="col-11">This is a Task</h4>
+                                            <button type="button" class="btn-close delete aria-label="Close"></button>
+                                        </div>
+                                        <p>Task Description</p>
+                                        <p><strong> Due : </strong>25/07/2025</p>
+                                        <div class="d-flex justify-content-between align-items-end">
+                                            <div>
+                                                <button class="btn btn-dark shadow-sm edit">Edit</button>
+                                                <button class="btn btn-dark shadow-sm done">Done</button>
+                                            </div>
+                                            <p class="m-0"><strong>Created on: </strong>05/06/2025</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <div> class="col-12 col-lg-6">
+                                <h2>Completed<h2>
+                                <ul id="completedList" class="list-group">
+
+                                ///////////// Completed Card ////////////////////////////
+                                    <li class="p-3 mt-2 shadow-sm card">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                         <h4 class="col-11 text-decoration-line-through  opacity-50">This is completed Task</h4>
+                                         <button type="button" class="btn-close delete" aria-label="close"></button>
+                                        </div>
+                                        <p class="text-decoration-line-through opacity-50">Task Description</p>
+                                        <p class="text-decoration-line-through opacity-50"<strong> Due : </strong>25/06/2025</p>
+                                        <div class="d-flex justify-content-between align-items-end">
+                                            <div>
+                                                <button class="btn btn-dark shadow-sm notDone">Not Done</button>
+                                            </div>
+                                                <p class="m-0 text-decoration-line-through opacity-50"><strong>Created on: </strong>05/06/2025</p>
+                                        </div>
+                                    </li>
+                                </ul> 
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </main>                   
+
+
+
+
+
+
+ <-------------------        What is an async function?   ------------------------------->
+
+An async function is a function that operates asynchronously via the event loop, using the await keyword to pause execution until a Promise is resolved. This allows non-blocking code execution.
+
+Non-blocking I/O operations
+APIs often need to:
+
+Fetch data from a database
+Call another API
+Read/write files
+These operations can take time. Using async/await allows the server to continue handling other requests while waiting for these operations to complete.
+
+Improved performance and scalability
+Without async, the server might block other incoming requests while waiting for one to finish. async helps handle many concurrent requests efficiently.
+
+Cleaner and more readable code
+Compared to traditional callbacks or .then() chains, async/await makes asynchronous code look more like synchronous code, which is easier to read and debug.
+
+Error handling with try/catch
+You can use try/catch blocks with async/await to handle errors more gracefully than with nested callbacks.
