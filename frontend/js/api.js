@@ -2,7 +2,8 @@
   
 const taskForm = document.getElementById("taskForm");
 const editTaskform = document.getElementById("editTaskForm");
-const url = "http://localhost:3000";
+//const url = "http://localhost:3000";    // for localhost
+const url = "https://todoapp-1-54w2.onrender.com";   //for Onine
 
 // ----------------------------------------- ↓ GENERAL FUNCTIONS ↓ -----------------------------------------
 
