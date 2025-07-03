@@ -18,7 +18,17 @@ const app = express();  // Using Express.Js FRAMEWORK to power the app
                           //-----------------------------↓ Middleware Setup ↓ ----------------------------            
 
 app.use(express.json());  //Uses express in JSON format
-app.use(cors('*'));   // Enables use of CORS - * means every domain is now allowed acces to this server to send and receive data - not secure - * is for development only = msgs from frontend to backend and vise versa.
+
+const corsOptions = {
+    origin: 'https://todoapp-woad-two.vercel.app',
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    credentials: true
+};
+
+app.use(cors(corsOptions));
+
+// app.use(cors('*'));   // Enables use of CORS - * means every domain is now allowed acces to this server to send and receive data - not secure - * is for development only = msgs from frontend to backend and vise versa.
+//Cross Origin resourse Sharing CORS
 
 
  console.log("This is msg");
